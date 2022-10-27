@@ -1,0 +1,11 @@
+// @use "./abstracts/variables" as v1;
+@use "./components/variables" as v2;
+// @use "./abstracts/resets";
+
+
+@use "./abstracts" as *;
+
+body {
+    background-color: $primary-color;
+    color : $text-color
+}
