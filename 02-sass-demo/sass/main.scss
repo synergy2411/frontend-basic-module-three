@@ -2,6 +2,7 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixin";
 
+
 body {
    @include pageTheme(false);
     font-family: $font-family;
@@ -20,5 +21,54 @@ body {
 
     @include mobile-breakpoint($mobile) {
         background-color: lightgreen;
+        color: #333;
+    }
+}
+
+
+.message {
+    font-size : 1.5rem;
+}
+
+.success {
+    background-color: green;
+    @extend .message;
+}
+
+.warning {
+    background-color: orangered;
+    @extend .message;
+}
+
+.error{
+    background-color: red;
+    @extend .message;
+}
+
+
+// $sides : top right bottom left;
+// $margins : 10px 12px 10px 12px;
+
+$sides : (
+    "top" : 10px,
+    "bottom" : 10px,
+    "left" : 12px,
+    "right" : 12px
+);
+
+
+.main {
+    @each $key, $val in $sides {
+        margin-#{$key} : #{$val}
+    }
+    @each $key, $val in $sides {
+        padding-#{$key} : #{$val}
+    }
+}
+
+
+@for $i from 1 through 5 {
+    .stuff-#{$i} {
+        margin : #{$i}rem
     }
 }
