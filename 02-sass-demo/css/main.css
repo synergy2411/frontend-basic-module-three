@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272727;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.main {
+  background-color: #272727;
+}
+.main .main__paragraph {
+  color: #45ff45;
+}
+.main .main__paragraph:hover {
+  color: pink;
+}

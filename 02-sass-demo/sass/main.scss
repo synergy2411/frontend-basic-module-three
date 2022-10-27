@@ -1,0 +1,19 @@
+@import "./abstracts/resets";
+@import "./abstracts/variables";
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: $font-family;
+    font-weight: map-get($font-weights, "medium");
+}
+
+.main {
+    background-color: $primary-color;
+    #{&}__paragraph {
+        color: $accent-color;
+        &:hover {
+            color: pink;
+        }
+    }
+}
