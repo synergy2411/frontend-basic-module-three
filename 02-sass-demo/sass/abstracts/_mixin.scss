@@ -1,0 +1,22 @@
+@mixin flexCenter ($direction : row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin pageTheme($themeLight : true){
+    @if $themeLight {
+        background-color: lighten($primary-color, 50%);
+        color: darken($text-color, 50%);
+    } @else {
+        background-color: darken($primary-color, 50%);
+        color: lighten($text-color, 50%);
+    }
+}
+
+@mixin mobile-breakpoint ($mobile-width : 600px){
+    @media screen and (max-width : $mobile-width) {
+        @content;
+    }
+}

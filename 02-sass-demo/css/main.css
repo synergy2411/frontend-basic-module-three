@@ -5,13 +5,17 @@
 }
 
 body {
-  background-color: #272727;
-  color: #fff;
+  background-color: black;
+  color: white;
   font-family: Helvetica, sans-serif;
   font-weight: 600;
 }
 
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #272727;
 }
 .main .main__paragraph {
@@ -19,4 +23,9 @@ body {
 }
 .main .main__paragraph:hover {
   color: pink;
+}
+@media screen and (max-width: 546px) {
+  .main {
+    background-color: lightgreen;
+  }
 }
