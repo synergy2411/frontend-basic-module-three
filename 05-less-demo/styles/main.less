@@ -1,0 +1,48 @@
+@import './mixin';
+@import './variables';
+
+body {
+  background-color: @base-color;
+  color: #ffa;
+}
+
+header {
+  background-color: aliceblue;
+  color: @base-color;
+  h1 {
+    font-size: 40px;
+  }
+}
+
+// Mixin
+
+.fancier-border {
+  #fancy-border(1px, blue);
+  background-color: aliceblue;
+  color: #272727;
+}
+
+// Merge
+
+// Comma ( + )
+// whitespace (+_)
+
+.container {
+  box-shadow+: 0 0 5px grey;
+  transform+_: rotate(7.5deg);
+}
+
+// .container2 {
+//   .container;
+//   box-shadow+: 5x 5x 5x red;
+//   transform+_: skew(15deg, 15deg);
+// }
+
+// functions
+
+@width: 0.5;
+
+button {
+  width: percentage(@width);
+  background-color: desaturate(red, 50%);
+}

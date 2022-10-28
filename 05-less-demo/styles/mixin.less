@@ -1,0 +1,6 @@
+#fancy-border(@size : 2px, @color : grey) when (@size > 2) {
+  border: @size @color dashed;
+}
+#fancy-border(@size : 2px, @color : grey) when (@size <= 2) {
+  border: @size @color solid;
+}

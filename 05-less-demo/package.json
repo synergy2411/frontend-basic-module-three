@@ -1,0 +1,16 @@
+{
+  "name": "05-less-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "less-watcher -p '' -d ./styles"
+  },
+  "keywords": [],
+  "author": "SumitK",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^4.1.3",
+    "less-watcher": "^1.2.0"
+  }
+}
